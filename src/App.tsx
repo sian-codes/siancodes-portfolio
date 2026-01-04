@@ -7,6 +7,7 @@ import ProjectsSection from "./components/sections/ProjectSection.tsx";
 import ExperienceSection from "./components/sections/ExperienceSection.tsx";
 import GoalsSection from "./components/sections/GoalsSection.tsx";
 import ContactSection from "./components/sections/ContactSection.tsx";
+import GengarSticker from "./theme/GengarSticker.tsx";
 
 const App: React.FC = () => {
     return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
             <ProjectsSection />
             <GoalsSection />
             <ContactSection />
+            <GengarSticker />
         </Layout>
     );
 };
