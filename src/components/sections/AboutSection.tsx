@@ -13,7 +13,7 @@ import dogwalk from '../../assets/section/dogwalk.png';
 import favfood from '../../assets/section/favfood.jpg';
 import flowers from '../../assets/section/Flowers.png';
 import gengar from '../../assets/section/Gengar.png';
-import greece from '../../assets/section/greece.png';
+import greece from '../../assets/section/Greece.png';
 import lego from '../../assets/section/lego.jpg';
 import starbotton from '../../assets/section/Starbotton.png';
 import timburton from '../../assets/section/timburton.jpg';
