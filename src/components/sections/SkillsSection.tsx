@@ -1,46 +1,68 @@
+// src/components/sections/SkillsSection.tsx
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import TechStackMarquee from "./TechStackMarquee.tsx";
-
+// import TechStackMarquee from '../components/TechStackMarquee'; // adjust path if needed
 
 const SkillsSection: React.FC = () => {
     return (
         <AnimatedSection id="skills" title="Skills">
-            <Typography variant="h5" sx={{ mb: 2 }}>
-                TL;DR — What I’m good at
-            </Typography>
-            <Box component="ul" sx={{ pl: 3, mb: 3 }}>
-                <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                    building <strong>clean, maintainable architecture</strong> with clear ownership boundaries
+            <Box sx={{ maxWidth: 900 }}>
+                <Typography variant="body1" sx={{ mb: 2 }}>
+                    Most of my day-to-day work is in Android, Kotlin and SDKs in the payments space, with a
+                    background in full stack and frontend work using TypeScript and React.
                 </Typography>
 
-                <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                    designing <strong>developer-friendly SDKs & APIs</strong> that reduce integration friction
+                <Typography
+                    variant="subtitle2"
+                    sx={{
+                        textTransform: 'uppercase',
+                        letterSpacing: 1.2,
+                        opacity: 0.8,
+                        mb: 1,
+                    }}
+                >
+                    TL;DR
                 </Typography>
 
-                <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                    handling <strong>async + lifecycle complexity safely</strong> in Android & Kotlin
+                <Box component="ul" sx={{ pl: 2.5, mb: 3 }}>
+                    <Typography component="li" variant="body2" sx={{ mb: 0.6 }}>
+                        <strong>Android & Kotlin:</strong> building and evolving SDKs, handling lifecycle,
+                        coroutines and architecture for payment flows.
+                    </Typography>
+                    <Typography component="li" variant="body2" sx={{ mb: 0.6 }}>
+                        <strong>React & TypeScript:</strong> frontend work, internal tools and developer-facing
+                        experiences, plus exposure to web components (Stencil).
+                    </Typography>
+                    <Typography component="li" variant="body2" sx={{ mb: 0.6 }}>
+                        <strong>Payments & SDK design:</strong> card and checkout flows, integration patterns
+                        and developer experience for merchant teams.
+                    </Typography>
+                    <Typography component="li" variant="body2">
+                        <strong>Ways of working:</strong> collaborating in cross-functional teams, reviewing
+                        code, documenting patterns and supporting other engineers.
+                    </Typography>
+                </Box>
+
+                <Typography
+                    variant="subtitle2"
+                    sx={{
+                        textTransform: 'uppercase',
+                        letterSpacing: 1.2,
+                        opacity: 0.8,
+                        mb: 1,
+                    }}
+                >
+                    Tools & technologies
                 </Typography>
 
-                <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                    writing code that is <strong>readable, testable & production-ready</strong>
-                </Typography>
+        <Box sx={{ mt: 2 }}>
+          <TechStackMarquee />
+        </Box>
 
-                <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                    improving <strong>developer experience through docs, examples & tooling</strong>
-                </Typography>
-
-                <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                    working <strong>end-to-end across mobile, frontend & backend APIs</strong>
-                </Typography>
-
-                <Typography component="li" variant="body1">
-                    collaborating <strong>calmly & thoughtfully</strong> in cross-functional teams
-                </Typography>
             </Box>
-            <TechStackMarquee />
         </AnimatedSection>
     );
 };

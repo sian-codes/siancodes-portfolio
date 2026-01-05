@@ -9,6 +9,10 @@ import CardActions from '@mui/material/CardActions';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import {CardMedia} from "@mui/material";
+import checkoutAndroid from "../../assets/android.png"
+import checkoutReactNative from "../../assets/RN.png"
+import checkoutWeb from "../../assets/web.png"
 
 interface Project {
     title: string;
@@ -19,6 +23,7 @@ interface Project {
     tech: string[];
     linkLabel?: string;
     linkUrl?: string;
+    image?: string;
 }
 
 const professionalProjects: Project[] = [
@@ -36,9 +41,10 @@ const professionalProjects: Project[] = [
         tech: ['Kotlin', 'Android SDK', 'Coroutines', 'Flows', 'Payments'],
         linkLabel: 'View Checkout Android docs',
         linkUrl: 'https://developer.worldpay.com/products/checkout/android',
+        image: checkoutAndroid,
     },
     {
-        title: 'Access Worldpay Checkout — Web & Cross-platform SDKs',
+        title: 'Access Worldpay Checkout — Web',
         role: 'Full-stack Software Engineer · Worldpay',
         timeframe: 'Ongoing',
         description:
@@ -51,6 +57,7 @@ const professionalProjects: Project[] = [
         tech: ['JavaScript', 'TypeScript', 'React', 'SDK design', 'Developer Experience'],
         linkLabel: 'View Checkout product page',
         linkUrl: 'https://developer.worldpay.com/products/checkout/web',
+        image: checkoutWeb,
     },
     {
         title: 'Access Worldpay Checkout — React Native SDK',
@@ -59,13 +66,14 @@ const professionalProjects: Project[] = [
         description:
             'Support the broader Checkout SDK ecosystem used by web and mobile merchants to collect card details and generate sessions for payments and tokens.',
         bullets: [
-            'Work with team maintaining React Native and iOS SDKs to keep patterns and behaviours aligned across SDKs.',
+            'Work with team maintaining React Native SDK to keep patterns and behaviours aligned across SDKs.',
             'Help debug and refine merchant integrations across different tech stacks.',
             'Feed back DX improvements into examples, documentation and configuration guidance.',
         ],
         tech: ['JavaScript', 'TypeScript', 'React', 'SDK design', 'Developer Experience'],
         linkLabel: 'View Checkout product page',
         linkUrl: 'https://developer.worldpay.com/products/checkout/reactnative',
+        image: checkoutReactNative,
     },
     {
         title: 'Internal — Integration Guide',
@@ -122,6 +130,18 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                     'linear-gradient(145deg, rgba(255,255,255,0.03), rgba(0,0,0,0.6))',
             }}
         >
+            {project.image && (
+                <CardMedia
+                    component="img"
+                    image={project.image}
+                    alt={project.title}
+                    sx={{
+                        height: 160,
+                        objectFit: 'cover',
+                        borderBottom: '1px solid rgba(255,255,255,0.08)',
+                    }}
+                />
+            )}
             <CardContent sx={{ pb: 2.5 }}>
                 {project.role && (
                     <Typography

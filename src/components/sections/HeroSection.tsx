@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
                                 <Chip label="Android & Kotlin" color="primary" variant="outlined" />
                                 <Chip label="Payments & SDKs" color="primary" variant="outlined" />
                                 <Chip
-                                    label="Full-stack (React + Node)"
+                                    label="Full-stack"
                                     color="secondary"
                                     variant="outlined"
                                 />
@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
                                 <Button
                                     variant="outlined"
                                     size="large"
-                                    href="/cv.pdf"
+                                    href="/public/SianCV.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

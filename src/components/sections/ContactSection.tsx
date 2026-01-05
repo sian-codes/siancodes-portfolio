@@ -105,7 +105,7 @@ const ContactSection: React.FC = () => {
                     <Tooltip title="Download my CV" arrow>
                         <IconButton
                             component="a"
-                            href="/cv.pdf"
+                            href="/public/SianCV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             sx={{
@@ -126,7 +126,7 @@ const ContactSection: React.FC = () => {
                 </Stack>
 
                 <Typography variant="body2" sx={{ opacity: 0.6 }}>
-                    I&apos;m always happy to talk about engineering, developer experience and mobile SDKs.
+                    I&apos;m always happy to talk about engineering, developer experience, mobile SDKs and Pokémon.
                 </Typography>
             </Box>
         </AnimatedSection>
